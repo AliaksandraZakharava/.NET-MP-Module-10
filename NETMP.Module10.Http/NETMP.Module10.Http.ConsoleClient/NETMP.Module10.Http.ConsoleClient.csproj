@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBDCAC9D-33B9-456B-ADEE-9D33BAB6C6A8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>NETMP.Module10.Http.ConsoleClient</RootNamespace>
+    <AssemblyName>NETMP.Module10.Http.ConsoleClient</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NETMP.Modelu10.Http.Common\NETMP.Module10.Http.Data.csproj">
+      <Project>{d2861013-811a-467f-9ef8-6708a379a230}</Project>
+      <Name>NETMP.Module10.Http.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NETMP.Module10.Http.DialogManager\NETMP.Module10.Http.DialogManager.csproj">
+      <Project>{ab016035-f6e5-4278-8121-4d41fdf241b1}</Project>
+      <Name>NETMP.Module10.Http.DialogManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NETMP.Module10.Http.FileManaging\NETMP.Module10.Http.CopyingManager.csproj">
+      <Project>{a0a72e45-926f-4770-9643-f4ea97214508}</Project>
+      <Name>NETMP.Module10.Http.CopyingManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NETMP.Module10.Http.HttpCrawler\NETMP.Module10.Http.HttpManager.csproj">
+      <Project>{8e3e411f-60cf-4834-92fa-5995bb88903c}</Project>
+      <Name>NETMP.Module10.Http.HttpManager</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
